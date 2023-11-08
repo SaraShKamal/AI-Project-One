@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/GenericSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/GenericSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/State.java" afterDir="false" />
-    </list>
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="genericSearch initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +68,15 @@
       <option name="presentableId" value="Default" />
       <updated>1699388391533</updated>
     </task>
+    <task id="LOCAL-00001" summary="genericSearch initial commit">
+      <option name="closed" value="true" />
+      <created>1699402154703</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699402154703</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,5 +89,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="genericSearch initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="genericSearch initial commit" />
   </component>
 </project>
