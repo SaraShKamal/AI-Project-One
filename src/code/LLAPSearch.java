@@ -1,4 +1,11 @@
 package code;
 
-public class LLAPSearch {
+public class LLAPSearch  extends GenericSearch{
+
+
+
+
+
+
+
 }
