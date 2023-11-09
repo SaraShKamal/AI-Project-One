@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="genericSearch initial commit" />
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/GenericSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/GenericSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/State.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,12 +42,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "maryam",
     "last_opened_file_path": "D:/GUC/Semester 9/AI/Projects/Project 1/ProjectOne-AI-Live-Long-and-Prosper/AI-Project-One",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
   <component name="RunManager">
@@ -76,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699402154703</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <option name="closed" value="true" />
+      <created>1699439981058</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699439981058</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="genericSearch initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="genericSearch initial commit" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
