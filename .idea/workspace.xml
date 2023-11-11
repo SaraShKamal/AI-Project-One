@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="BFS &amp; DFS &amp; UCS Starter">
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="merging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Actions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699701830775</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="merging">
+      <created>1699706811236</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699706811236</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +143,7 @@
     <MESSAGE value="modified state structure" />
     <MESSAGE value="ALL ACTIONS DONE +&#10;Modified State Structure" />
     <MESSAGE value="BFS &amp; DFS &amp; UCS Starter" />
-    <option name="LAST_COMMIT_MESSAGE" value="BFS &amp; DFS &amp; UCS Starter" />
+    <MESSAGE value="merging" />
+    <option name="LAST_COMMIT_MESSAGE" value="merging" />
   </component>
 </project>
