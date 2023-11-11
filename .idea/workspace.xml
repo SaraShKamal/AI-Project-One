@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="merged IDS and UCS" />
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="greedy done">
+      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,21 +128,47 @@
       <option name="project" value="LOCAL" />
       <updated>1699706676065</updated>
     </task>
-    <task id="LOCAL-00008" summary="merging">
-      <created>1699710375293</created>
+    <task id="LOCAL-00008" summary="BFS-DONE&lt;3">
+      <option name="closed" value="true" />
+      <created>1699709914989</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1699710375293</updated>
+      <updated>1699709914989</updated>
     </task>
-    <task id="LOCAL-00009" summary="DFS done and modified actions conditions">
-      <created>1699712100245</created>
+    <task id="LOCAL-00009" summary="UCS-Starter">
+      <option name="closed" value="true" />
+      <created>1699712680533</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1699712100245</updated>
+      <updated>1699712680533</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="UCS done">
+      <option name="closed" value="true" />
+      <created>1699715776069</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699715776070</updated>
+    </task>
+    <task id="LOCAL-00011" summary="merging UCS and IDS">
+      <option name="closed" value="true" />
+      <created>1699716062392</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699716062392</updated>
+    </task>
+    <task id="LOCAL-00012" summary="greedy done">
+      <option name="closed" value="true" />
+      <created>1699729525355</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699729525355</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,8 +189,12 @@
     <MESSAGE value="ALL ACTIONS DONE +&#10;Modified State Structure" />
     <MESSAGE value="BFS &amp; DFS &amp; UCS Starter" />
     <MESSAGE value="BFS Debugging" />
-    <MESSAGE value="merging" />
-    <MESSAGE value="DFS done and modified actions conditions" />
-    <option name="LAST_COMMIT_MESSAGE" value="DFS done and modified actions conditions" />
+    <MESSAGE value="BFS-DONE&lt;3" />
+    <MESSAGE value="UCS-Starter" />
+    <MESSAGE value="UCS done" />
+    <MESSAGE value="bla" />
+    <MESSAGE value="merging UCS and IDS" />
+    <MESSAGE value="greedy done" />
+    <option name="LAST_COMMIT_MESSAGE" value="greedy done" />
   </component>
 </project>
