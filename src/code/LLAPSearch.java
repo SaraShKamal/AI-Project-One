@@ -11,7 +11,7 @@ public class LLAPSearch extends GenericSearch {
         Initials problem = new Initials(init);
         Actions actions = new Actions(problem);
         State initialState = new State(problem.getProsperity(), problem.getFood(), problem.getMaterials(), problem.getEnergy(),
-                0,100000,0,0,0,0,ActionsEnum.NOSOLUTION);
+                0,100000,0,0,0,0,ActionsEnum.ROOT);
         if (Objects.equals(strategy, "BFS")){
             BFS bfs = new BFS(actions);
             // plan, monetaryCost, nodesExpanded

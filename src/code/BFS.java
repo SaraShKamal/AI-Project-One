@@ -14,6 +14,7 @@ public class BFS extends BFSComparator {
         // Create a priority queue with the BFSComparator.
         PriorityQueue<State> openSet = new PriorityQueue<>(new BFSComparator());
         openSet.add(initialState);
+        System.out.print(initialState.getAction().toString());
 
         Set<State> visited = new HashSet<>(); // To keep track of visited states.
 
@@ -24,7 +25,6 @@ public class BFS extends BFSComparator {
         int monetaryCost = 0;
         int nodesExpanded = 0;
 
-
         while (!openSet.isEmpty()) {
             State currentState = openSet.poll();
             nodesExpanded++;
@@ -34,11 +34,12 @@ public class BFS extends BFSComparator {
             // Check if the current state is the goal state.
             if (currentState.getProsperity()>=100) {
                 //Goal state found.
+                monetaryCost=currentState.getMoney_spent();
                 while (currentState != null) {
-                    plan.add(0, actionMap.get(currentState)); // Add action at the beginning of the list
-                    monetaryCost += currentState.getMoney_spent();
+                    plan.add(0, actionMap.get(currentState)); // Add action at the beginning of the list.
                     currentState = parentMap.get(currentState);
                 }
+
                 return new SearchResult(plan,monetaryCost,nodesExpanded); // Goal state found.
             }
             visited.add(currentState);
@@ -47,7 +48,6 @@ public class BFS extends BFSComparator {
             List<State> successors = currentState.generateSuccessors(actions);
             //Debugging
             //Loop through successors
-
             System.out.println("Successors:");
             for (State successor : successors) {
                 System.out.println(successor.toString());

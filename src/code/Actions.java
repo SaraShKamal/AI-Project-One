@@ -87,6 +87,10 @@ public class Actions {
         int currentMaterials = s.getMaterials();
         int currentEnergy = s.getEnergy();
         int currentMoneySpent = s.getMoney_spent();
+        int delayFood = s.getDelayFood();
+        int delayMaterials = s.getDelayMaterials();
+        int delayEnergy = s.getDelayEnergy();
+
 
         currentFood--;
         currentMaterials--;
@@ -96,7 +100,7 @@ public class Actions {
         int budget = s.getTotalMoneyOwned() - totalDecrease;
 
         if (s.getDelayFood()>0){
-            s.setDelayFood(s.getDelayFood()-1);
+            delayFood--;
             if (s.getDelayFood() == 0) {
                 if (currentFood > 50)
                     currentFood = 50;
@@ -106,7 +110,7 @@ public class Actions {
         }
 
         if (s.getDelayMaterials()>0){
-            s.setDelayMaterials(s.getDelayMaterials()-1);
+            delayMaterials--;
             if (s.getDelayMaterials() == 0) {
                 if (currentMaterials > 50)
                     currentMaterials = 50;
@@ -116,7 +120,7 @@ public class Actions {
         }
 
         if (s.getDelayEnergy()>0){
-            s.setDelayEnergy(s.getDelayEnergy()-1);
+            delayEnergy--;
             if (s.getDelayEnergy() == 0) {
                 if (currentEnergy > 50)
                     currentEnergy = 50;
@@ -130,7 +134,7 @@ public class Actions {
         }
 
         return new State(s.getProsperity(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
-                budget, s.getDelayFood(), s.getDelayMaterials(), s.getDelayEnergy(),
+                budget, delayFood, delayMaterials, delayEnergy,
                 s.getDepth()+1,ActionsEnum.WAIT);
 
     }
@@ -141,6 +145,9 @@ public class Actions {
         int currentMaterials = s.getMaterials();
         int currentEnergy = s.getEnergy();
         int currentMoneySpent = s.getMoney_spent();
+        int delayFood = s.getDelayFood();
+        int delayMaterials = s.getDelayMaterials();
+        int delayEnergy = s.getDelayEnergy();
 
         currentFood-=init.getFoodUseBUILD1();
         currentMaterials-=init.getMaterialsUseBUILD1();
@@ -152,7 +159,7 @@ public class Actions {
         int budget = s.getTotalMoneyOwned() - (totalDecrease+init.getPriceBUILD1());
 
         if (s.getDelayFood()>0){
-            s.setDelayFood(s.getDelayFood()-1);
+            delayFood--;
             if (s.getDelayFood() == 0) {
                 if (currentFood > 50)
                     currentFood = 50;
@@ -162,7 +169,7 @@ public class Actions {
         }
 
         if (s.getDelayMaterials()>0){
-            s.setDelayMaterials(s.getDelayMaterials()-1);
+            delayMaterials--;
             if (s.getDelayMaterials() == 0) {
                 if (currentMaterials > 50)
                     currentMaterials = 50;
@@ -172,7 +179,7 @@ public class Actions {
         }
 
         if (s.getDelayEnergy()>0){
-            s.setDelayEnergy(s.getDelayEnergy()-1);
+            delayEnergy--;
             if (s.getDelayEnergy() == 0) {
                 if (currentEnergy > 50)
                     currentEnergy = 50;
@@ -185,8 +192,9 @@ public class Actions {
             return null;
         }
 
-        return new State(s.getProsperity()+init.getProsperityBUILD1(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
-                budget, s.getDelayFood(), s.getDelayMaterials(), s.getDelayEnergy(),
+        return new State(s.getProsperity()+init.getProsperityBUILD1(), currentFood, currentMaterials, currentEnergy,
+                currentMoneySpent,
+                budget, delayFood, delayMaterials, delayEnergy,
                 s.getDepth()+1,ActionsEnum.BUILD1);
 
     }
@@ -197,6 +205,9 @@ public class Actions {
         int currentMaterials = s.getMaterials();
         int currentEnergy = s.getEnergy();
         int currentMoneySpent = s.getMoney_spent();
+        int delayFood = s.getDelayFood();
+        int delayMaterials = s.getDelayMaterials();
+        int delayEnergy = s.getDelayEnergy();
 
         currentFood-=init.getFoodUseBUILD2();
         currentMaterials-=init.getMaterialsUseBUILD2();
@@ -208,7 +219,7 @@ public class Actions {
         int budget = s.getTotalMoneyOwned() - (totalDecrease+init.getPriceBUILD2());
 
         if (s.getDelayFood()>0){
-            s.setDelayFood(s.getDelayFood()-1);
+            delayFood--;
             if (s.getDelayFood() == 0) {
                 if (currentFood > 50)
                     currentFood = 50;
@@ -218,7 +229,7 @@ public class Actions {
         }
 
         if (s.getDelayMaterials()>0){
-            s.setDelayMaterials(s.getDelayMaterials()-1);
+            delayMaterials--;
             if (s.getDelayMaterials() == 0) {
                 if (currentMaterials > 50)
                     currentMaterials = 50;
@@ -228,7 +239,7 @@ public class Actions {
         }
 
         if (s.getDelayEnergy()>0){
-            s.setDelayEnergy(s.getDelayEnergy()-1);
+            delayEnergy--;
             if (s.getDelayEnergy() == 0) {
                 if (currentEnergy > 50)
                     currentEnergy = 50;
@@ -242,7 +253,7 @@ public class Actions {
         }
 
         return new State(s.getProsperity()+init.getProsperityBUILD2(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
-                budget, s.getDelayFood(), s.getDelayMaterials(), s.getDelayEnergy(),
+                budget, delayFood, delayMaterials, delayEnergy,
                 s.getDepth()+1,ActionsEnum.BUILD2);
 
 
