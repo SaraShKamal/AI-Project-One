@@ -12,7 +12,6 @@ public class Actions {
         int currentMaterials = s.getMaterials();
         int currentEnergy = s.getEnergy();
         int currentMoneySpent = s.getMoney_spent();
-
         currentFood--;
         currentMaterials--;
         currentEnergy--;
@@ -22,7 +21,7 @@ public class Actions {
 
 
         if (s.getDelayFood() != 0 || s.getDelayMaterials() != 0 || s.getDelayEnergy() != 0 ||
-                s.getTotalMoneyOwned() == 0 || s.getFood() == 0 || s.getMaterials() == 0 || s.getEnergy() == 0) {
+                s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0) {
             return null;
         }
         return new State(s.getProsperity(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
@@ -46,7 +45,7 @@ public class Actions {
 
 
         if (s.getDelayFood() != 0 || s.getDelayMaterials() != 0 || s.getDelayEnergy() != 0 ||
-                s.getTotalMoneyOwned() == 0 || s.getFood() == 0 || s.getMaterials() == 0 || s.getEnergy() == 0) {
+                s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0) {
             return null;
         }
         else {
@@ -72,7 +71,7 @@ public class Actions {
 
 
         if (s.getDelayFood() != 0 || s.getDelayMaterials() != 0 || s.getDelayEnergy() != 0 ||
-                s.getTotalMoneyOwned() == 0 || s.getFood() == 0 || s.getMaterials() == 0 || s.getEnergy() == 0) {
+                s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0) {
             return null;
         }
         else {
@@ -130,7 +129,7 @@ public class Actions {
             }
         }
 
-        if (s.getTotalMoneyOwned() == 0 || s.getFood() == 0 || s.getMaterials() == 0 || s.getEnergy() == 0) {
+        if (s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0 ) {
             return null;
         }
 
@@ -189,7 +188,9 @@ public class Actions {
             }
         }
 
-        if (s.getTotalMoneyOwned() == 0 || s.getFood() == 0 || s.getMaterials() == 0 || s.getEnergy() == 0) {
+        if (s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0 ||
+                s.getFood() < init.getFoodUseBUILD1() || s.getMaterials() < init.getMaterialsUseBUILD1() ||
+                s.getEnergy() <init.getEnergyUseBUILD1()) {
             return null;
         }
 
@@ -249,7 +250,9 @@ public class Actions {
             }
         }
 
-        if (s.getTotalMoneyOwned() == 0 || s.getFood() == 0 || s.getMaterials() == 0 || s.getEnergy() == 0) {
+        if (s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0 ||
+                s.getFood() < init.getFoodUseBUILD2() || s.getMaterials() < init.getMaterialsUseBUILD2() ||
+                s.getEnergy() <init.getEnergyUseBUILD2()) {
             return null;
         }
 
