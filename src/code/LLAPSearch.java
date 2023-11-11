@@ -12,12 +12,12 @@ public class LLAPSearch extends GenericSearch {
         Actions actions = new Actions(problem);
         State initialState = new State(problem.getProsperity(), problem.getFood(), problem.getMaterials(), problem.getEnergy(),
                 0,100000,0,0,0,0,ActionsEnum.ROOT);
+        String resultString = "";
 
         if (Objects.equals(strategy, "BF")){
             BFS bfs = new BFS(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = bfs.bfsSearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -43,7 +43,6 @@ public class LLAPSearch extends GenericSearch {
             DFS dfs = new DFS(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = dfs.dfsSearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -70,7 +69,6 @@ public class LLAPSearch extends GenericSearch {
             IDS ids = new IDS(actions) ;
             // plan, monetaryCost, nodesExpanded
             SearchResult result = ids.idsSearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -98,7 +96,6 @@ public class LLAPSearch extends GenericSearch {
             UCS ucs = new UCS(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = ucs.ucsSearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -126,7 +123,6 @@ public class LLAPSearch extends GenericSearch {
             Greedy1 greedy1 = new Greedy1(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = greedy1.greedySearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -153,7 +149,6 @@ public class LLAPSearch extends GenericSearch {
             Greedy2 greedy2 = new Greedy2(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = greedy2.greedySearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -180,7 +175,6 @@ public class LLAPSearch extends GenericSearch {
             AStar1 aStar1 = new AStar1(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = aStar1.aStarSearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -207,7 +201,6 @@ public class LLAPSearch extends GenericSearch {
             AStar2 aStar2 = new AStar2(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = aStar2.aStarSearch(initialState);
-            String resultString = "";
             //loop through the plan and put it in a string separated by ,
             for (int i = 0; i < result.getPlan().size(); i++) {
                 if (i == result.getPlan().size()-1){
@@ -228,6 +221,9 @@ public class LLAPSearch extends GenericSearch {
                 }
             }
             return resultString;
+        }
+        if (resultString.equals("") || resultString.equals(null)){
+            return "NOSOLUTION";
         }
         return "NOSOLUTION";
     }

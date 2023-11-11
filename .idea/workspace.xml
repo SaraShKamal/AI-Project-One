@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="strategies syntax">
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="Solve strings fixed+visualize parameter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI-Project-One.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Project-One.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Greedy1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Greedy1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Greedy2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Greedy2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/IDS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/IDS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/SearchResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/UCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/UCS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699729767683</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Solve strings fixed+visualize parameter">
+      <option name="closed" value="true" />
+      <created>1699734629588</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699734629664</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +217,7 @@
     <MESSAGE value="merging UCS and IDS" />
     <MESSAGE value="greedy done" />
     <MESSAGE value="strategies syntax" />
-    <option name="LAST_COMMIT_MESSAGE" value="strategies syntax" />
+    <MESSAGE value="Solve strings fixed+visualize parameter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solve strings fixed+visualize parameter" />
   </component>
 </project>
