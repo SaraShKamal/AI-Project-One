@@ -24,9 +24,12 @@ public class BFS extends BFSComparator {
         int monetaryCost = 0;
         int nodesExpanded = 0;
 
+
         while (!openSet.isEmpty()) {
             State currentState = openSet.poll();
             nodesExpanded++;
+            System.out.println("Current State:");
+            System.out.println(currentState.toString());
 
             // Check if the current state is the goal state.
             if (currentState.getProsperity()>=100) {
@@ -44,8 +47,7 @@ public class BFS extends BFSComparator {
             List<State> successors = currentState.generateSuccessors(actions);
             //Debugging
             //Loop through successors
-            System.out.println("Current State:");
-            System.out.println(currentState.toString());
+
             System.out.println("Successors:");
             for (State successor : successors) {
                 System.out.println(successor.toString());

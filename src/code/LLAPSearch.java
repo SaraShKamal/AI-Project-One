@@ -29,7 +29,7 @@ public class LLAPSearch extends GenericSearch {
                 "30,2;19,1;15,1;" +
                 "300,5,7,3,20;" +
                 "500,8,6,3,40;";  // Replace with your initial state string
-        String strategy = "BFS"; // Choose your strategy
+        String strategy = "DFS"; // Choose your strategy
         boolean visualize = true; // Set to true to visualize
 
         String result = solve(init, strategy, visualize);

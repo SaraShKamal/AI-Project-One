@@ -12,7 +12,6 @@ public class Actions {
         int currentMaterials = s.getMaterials();
         int currentEnergy = s.getEnergy();
         int currentMoneySpent = s.getMoney_spent();
-
         currentFood--;
         currentMaterials--;
         currentEnergy--;
