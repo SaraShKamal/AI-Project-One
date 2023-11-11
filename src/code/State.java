@@ -158,42 +158,42 @@ public class State {
         // 1. RequestFood
         State nextState1 = actions.RequestFood(this);
         if (nextState1 != null) {
-            System.out.println(nextState1.toString());  // for debugging
+            //System.out.println(nextState1.toString());  // for debugging
             successors.add(nextState1);
         }
 
         // 2. RequestEnergy
         State nextState2 = actions.RequestEnergy(this);
         if (nextState2 != null) {
-            System.out.println(nextState2.toString());  // for debugging
+            //System.out.println(nextState2.toString());  // for debugging
             successors.add(nextState2);
         }
 
         // 3. RequestMaterials
         State nextState3 = actions.RequestMaterials(this);
         if (nextState3 != null) {
-            System.out.println(nextState3.toString());  // for debugging
+            //System.out.println(nextState3.toString());  // for debugging
             successors.add(nextState3);
         }
 
         // 4. WAIT
         State nextState4 = actions.WAIT(this);
         if (nextState4 != null) {
-            System.out.println(nextState4.toString());  // for debugging
+            //System.out.println(nextState4.toString());  // for debugging
             successors.add(nextState4);
         }
 
         // 5. BUILD1
         State nextState5 = actions.BUILD1(this);
         if (nextState5 != null) {
-            System.out.println(nextState5.toString());  // for debugging
+            //System.out.println(nextState5.toString());  // for debugging
             successors.add(nextState5);
         }
 
         // 6. BUILD2
         State nextState6 = actions.BUILD2(this);
         if (nextState6 != null) {
-            System.out.println(nextState6.toString());  // for debugging
+            //System.out.println(nextState6.toString());  // for debugging
             successors.add(nextState6);
         }
 

@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="modified state structure">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/Actions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/ActionsEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/BFSComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/DFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/DFSComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/Initials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/SearchResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/UCSComparator.java" afterDir="false" />
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="BFS &amp; DFS &amp; UCS Starter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699574845971</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="BFS &amp; DFS &amp; UCS Starter">
+      <option name="closed" value="true" />
+      <created>1699701830774</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699701830775</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +133,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="modified state structure" />
     <MESSAGE value="ALL ACTIONS DONE +&#10;Modified State Structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="ALL ACTIONS DONE +&#10;Modified State Structure" />
+    <MESSAGE value="BFS &amp; DFS &amp; UCS Starter" />
+    <option name="LAST_COMMIT_MESSAGE" value="BFS &amp; DFS &amp; UCS Starter" />
   </component>
 </project>
