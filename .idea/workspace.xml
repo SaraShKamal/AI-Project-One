@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="UCS done" />
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="merging UCS and IDS">
+      <change afterPath="$PROJECT_DIR$/src/code/AStar1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/AStar2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/Greedy1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/Greedy2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/Greedy2Comparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699715776070</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="merging UCS and IDS">
+      <option name="closed" value="true" />
+      <created>1699716062392</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699716062392</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +190,8 @@
     <MESSAGE value="BFS-DONE&lt;3" />
     <MESSAGE value="UCS-Starter" />
     <MESSAGE value="UCS done" />
-    <option name="LAST_COMMIT_MESSAGE" value="UCS done" />
+    <MESSAGE value="bla" />
+    <MESSAGE value="merging UCS and IDS" />
+    <option name="LAST_COMMIT_MESSAGE" value="merging UCS and IDS" />
   </component>
 </project>
