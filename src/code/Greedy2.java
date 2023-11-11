@@ -19,6 +19,8 @@ public class Greedy2 {
         Map<State, State> parentMap = new HashMap<>();
         Map<State, ActionsEnum> actionMap = new HashMap<>();
         List<ActionsEnum> plan = new ArrayList<>();
+        //State String
+        List<String> statesString = new ArrayList<>();
 
         int monetaryCost = 0;
         int nodesExpanded = 0;
@@ -31,11 +33,12 @@ public class Greedy2 {
                 // Goal state found.
                 monetaryCost = currentState.getMoney_spent();
                 while (currentState != null) {
+                    statesString.add(currentState.toString());
                     plan.add(0, actionMap.get(currentState));
                     currentState = parentMap.get(currentState);
                 }
 
-                return new SearchResult(plan, monetaryCost, nodesExpanded);
+                return new SearchResult(plan, monetaryCost, nodesExpanded, statesString);
             }
             visited.add(currentState);
 
@@ -50,6 +53,6 @@ public class Greedy2 {
             }
         }
 
-        return new SearchResult(Collections.emptyList(), -1, nodesExpanded);
+        return null;
     }
 }

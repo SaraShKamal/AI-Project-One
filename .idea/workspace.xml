@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="greedy done">
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="strategies syntax">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI-Project-One.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AI-Project-One.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Greedy1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Greedy1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Greedy2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Greedy2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/IDS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/IDS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/SearchResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/UCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/UCS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,19 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;maryam&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GUC/Semester 9/AI/Projects/Project 1/ProjectOne-AI-Live-Long-and-Prosper/AI-Project-One&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "maryam",
+    "last_opened_file_path": "D:/GUC/Semester 9/AI/Projects/Project 1/ProjectOne-AI-Live-Long-and-Prosper/AI-Project-One",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -168,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699729525355</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="strategies syntax">
+      <option name="closed" value="true" />
+      <created>1699729767683</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699729767683</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +216,7 @@
     <MESSAGE value="bla" />
     <MESSAGE value="merging UCS and IDS" />
     <MESSAGE value="greedy done" />
-    <option name="LAST_COMMIT_MESSAGE" value="greedy done" />
+    <MESSAGE value="strategies syntax" />
+    <option name="LAST_COMMIT_MESSAGE" value="strategies syntax" />
   </component>
 </project>

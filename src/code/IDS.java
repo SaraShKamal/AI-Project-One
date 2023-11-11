@@ -31,6 +31,8 @@ public class IDS extends DFSComparator {
         Map<State, State> parentMap = new HashMap<>();
         Map<State, ActionsEnum> actionMap = new HashMap<>();
         List<ActionsEnum> plan = new ArrayList<>();
+        //State String
+        List<String> statesString = new ArrayList<>();
         int monetaryCost = 0;
         int nodesExpanded = 0;
 
@@ -41,10 +43,11 @@ public class IDS extends DFSComparator {
             if (currentState.getProsperity() >= 100) {
                 monetaryCost = currentState.getMoney_spent();
                 while (currentState != null) {
+                    statesString.add(currentState.toString());
                     plan.add(0, actionMap.get(currentState));
                     currentState = parentMap.get(currentState);
                 }
-                return new SearchResult(plan, monetaryCost, nodesExpanded);
+                return new SearchResult(plan, monetaryCost, nodesExpanded, statesString);
             }
 
             if (currentState.getDepth() >= depthLimit) {
