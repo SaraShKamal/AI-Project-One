@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="BFS Debugging">
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="BFS-DONE&lt;3">
+      <change afterPath="$PROJECT_DIR$/src/code/UCS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/ActionsEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ActionsEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -132,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699706676065</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="BFS-DONE&lt;3">
+      <option name="closed" value="true" />
+      <created>1699709914989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699709914989</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +159,7 @@
     <MESSAGE value="ALL ACTIONS DONE +&#10;Modified State Structure" />
     <MESSAGE value="BFS &amp; DFS &amp; UCS Starter" />
     <MESSAGE value="BFS Debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="BFS Debugging" />
+    <MESSAGE value="BFS-DONE&lt;3" />
+    <option name="LAST_COMMIT_MESSAGE" value="BFS-DONE&lt;3" />
   </component>
 </project>

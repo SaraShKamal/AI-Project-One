@@ -16,9 +16,23 @@ public class LLAPSearch extends GenericSearch {
             BFS bfs = new BFS(actions);
             // plan, monetaryCost, nodesExpanded
             SearchResult result = bfs.bfsSearch(initialState);
-
             return result.toString();
         }
+        //DFS
+        else if (Objects.equals(strategy, "DFS")){
+            DFS dfs = new DFS(actions);
+            // plan, monetaryCost, nodesExpanded
+            //SearchResult result = dfs.dfsSearch(initialState);
+            //return result.toString();
+        }
+        //UCS
+        else if (Objects.equals(strategy, "UCS")){
+            UCS ucs = new UCS(actions);
+            // plan, monetaryCost, nodesExpanded
+            SearchResult result = ucs.ucsSearch(initialState);
+            return result.toString();
+        }
+
         return null;
     }
 
@@ -29,7 +43,7 @@ public class LLAPSearch extends GenericSearch {
                 "30,2;19,1;15,1;" +
                 "300,5,7,3,20;" +
                 "500,8,6,3,40;";  // Replace with your initial state string
-        String strategy = "BFS"; // Choose your strategy
+        String strategy = "UCS"; // Choose your strategy
         boolean visualize = true; // Set to true to visualize
 
         String result = solve(init, strategy, visualize);
