@@ -19,6 +19,13 @@ public class LLAPSearch extends GenericSearch {
 
             return result.toString();
         }
+        if (Objects.equals(strategy, "DFS")){
+            DFS dfs = new DFS(actions);
+            // plan, monetaryCost, nodesExpanded
+            SearchResult result = dfs.dfsSearch(initialState);
+
+            return result.toString();
+        }
         return null;
     }
 
