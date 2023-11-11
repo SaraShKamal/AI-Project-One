@@ -1,15 +1,19 @@
 package code;
+import java.util.*;
 
 public class State {
     private int prosperity, food, materials, energy, money_spent, TotalMoneyOwned;
     private int delayFood, delayMaterials, delayEnergy;
     private int depth;
 
+    //enum for actions (WAIT, BUILD1, BUILD2, REQUESTFOOD, REQUESTMATERIALS, REQUESTENERGY)
+    private ActionsEnum action;
+
 
     //Constructor 2 that contains prosperity, food, materials, energy, money_spent
     public State(int prosperity, int food, int materials, int energy,
                  int money_spent, int TotalMoneyOwned,
-                 int delayFood, int delayMaterials, int delayEnergy, int depth) {
+                 int delayFood, int delayMaterials, int delayEnergy, int depth, ActionsEnum action) {
 
         this.prosperity = prosperity;
         this.food = food;
@@ -21,6 +25,11 @@ public class State {
         this.delayMaterials = delayMaterials;
         this.delayEnergy = delayEnergy;
         this.depth = depth;
+        this.action = action;
+    }
+
+    public ActionsEnum getAction() {
+        return action;
     }
 
     public int getProsperity() {
@@ -140,14 +149,80 @@ public class State {
         this.delayEnergy = delayEnergy;
     }
 
+    //Generate successors according to the 6 actions
+    public List<State> generateSuccessors(Actions actions) {
+        List<State> successors = new ArrayList<>();
+
+        // Generate successors for each action using the LLAP class.
+
+        // 1. RequestFood
+        State nextState1 = actions.RequestFood(this);
+        if (nextState1 != null) {
+            System.out.println(nextState1.toString());  // for debugging
+            successors.add(nextState1);
+        }
+
+        // 2. RequestEnergy
+        State nextState2 = actions.RequestEnergy(this);
+        if (nextState2 != null) {
+            System.out.println(nextState2.toString());  // for debugging
+            successors.add(nextState2);
+        }
+
+        // 3. RequestMaterials
+        State nextState3 = actions.RequestMaterials(this);
+        if (nextState3 != null) {
+            System.out.println(nextState3.toString());  // for debugging
+            successors.add(nextState3);
+        }
+
+        // 4. WAIT
+        State nextState4 = actions.WAIT(this);
+        if (nextState4 != null) {
+            System.out.println(nextState4.toString());  // for debugging
+            successors.add(nextState4);
+        }
+
+        // 5. BUILD1
+        State nextState5 = actions.BUILD1(this);
+        if (nextState5 != null) {
+            System.out.println(nextState5.toString());  // for debugging
+            successors.add(nextState5);
+        }
+
+        // 6. BUILD2
+        State nextState6 = actions.BUILD2(this);
+        if (nextState6 != null) {
+            System.out.println(nextState6.toString());  // for debugging
+            successors.add(nextState6);
+        }
+
+        return successors;
+    }
+
+
+
     @Override
     public String toString() {
+//        return "State{" +
+//                "prosperity=" + prosperity +
+//                ", food=" + food +
+//                ", materials=" + materials +
+//                ", energy=" + energy +
+//                ", money_spent=" + money_spent +
+//                '}';
         return "State{" +
                 "prosperity=" + prosperity +
                 ", food=" + food +
                 ", materials=" + materials +
                 ", energy=" + energy +
                 ", money_spent=" + money_spent +
+                ", TotalMoneyOwned=" + TotalMoneyOwned +
+                ", delayFood=" + delayFood +
+                ", delayMaterials=" + delayMaterials +
+                ", delayEnergy=" + delayEnergy +
+                ", depth=" + depth +
+                ", action=" + action +
                 '}';
     }
 
