@@ -18,12 +18,8 @@ public class SearchResult {
 
     //get plan
     public List<ActionsEnum> getPlan() {
-        //if plan first element is null, replace it with ROOT enum
-        if (plan.get(0) == null) {
-            plan.set(0, ActionsEnum.ROOT);
-        }
-
-        return plan;
+        	//return plan without the first action
+            	return plan.subList(1, plan.size());
     }
 
     //get monetary cost
