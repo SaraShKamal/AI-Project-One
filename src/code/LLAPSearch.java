@@ -261,17 +261,18 @@ public class LLAPSearch extends GenericSearch {
         return "NOSOLUTION";
     }
 
-//    public static void main(String[] args) {
-//        String init ="50;"+
-//                "22,22,22;" +
-//                "50,60,70;" +
-//                "30,2;19,1;15,1;" +
-//                "300,5,7,3,20;" +
-//                "500,8,6,3,40;";  // Replace with your initial state string
-//        String strategy = "AS1"; // Choose your strategy
-//        boolean visualize = true; // Set to true to visualize
-//
-//        String result = solve(init, strategy, visualize);
-//        System.out.println(result);
-//    }
+    public static void main(String[] args) {
+        String initialState0 = "17;" +
+                "49,30,46;" +
+                "7,57,6;" +
+                "7,1;20,2;29,2;" +
+                "350,10,9,8,28;" +
+                "408,8,12,13,34;";
+
+        String strategy = "BF"; // Choose your strategy
+        boolean visualize = true; // Set to true to visualize
+
+        String result = solve(initialState0, strategy, visualize);
+        System.out.println(result);
+    }
 }
