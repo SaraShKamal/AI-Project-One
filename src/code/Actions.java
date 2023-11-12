@@ -99,9 +99,9 @@ public class Actions {
         currentMoneySpent += totalDecrease;
         int budget = s.getTotalMoneyOwned() - totalDecrease;
 
-        if (s.getDelayFood()>0){
+        if (delayFood>0){
             delayFood--;
-            if (s.getDelayFood() == 0) {
+            if (delayFood == 0) {
                 if (currentFood > 50)
                     currentFood = 50;
                 else
@@ -109,9 +109,9 @@ public class Actions {
             }
         }
 
-        if (s.getDelayMaterials()>0){
+        if (delayMaterials>0){
             delayMaterials--;
-            if (s.getDelayMaterials() == 0) {
+            if (delayMaterials == 0) {
                 if (currentMaterials > 50)
                     currentMaterials = 50;
                 else
@@ -119,9 +119,9 @@ public class Actions {
             }
         }
 
-        if (s.getDelayEnergy()>0){
+        if (delayEnergy>0){
             delayEnergy--;
-            if (s.getDelayEnergy() == 0) {
+            if (delayEnergy == 0) {
                 if (currentEnergy > 50)
                     currentEnergy = 50;
                 else
@@ -158,9 +158,9 @@ public class Actions {
         currentMoneySpent += (totalDecrease+init.getPriceBUILD1());
         int budget = s.getTotalMoneyOwned() - (totalDecrease+init.getPriceBUILD1());
 
-        if (s.getDelayFood()>0){
+        if (delayFood>0){
             delayFood--;
-            if (s.getDelayFood() == 0) {
+            if (delayFood == 0) {
                 if (currentFood > 50)
                     currentFood = 50;
                 else
@@ -168,9 +168,9 @@ public class Actions {
             }
         }
 
-        if (s.getDelayMaterials()>0){
+        if (delayMaterials>0){
             delayMaterials--;
-            if (s.getDelayMaterials() == 0) {
+            if (delayMaterials == 0) {
                 if (currentMaterials > 50)
                     currentMaterials = 50;
                 else
@@ -178,9 +178,9 @@ public class Actions {
             }
         }
 
-        if (s.getDelayEnergy()>0){
+        if (delayEnergy>0){
             delayEnergy--;
-            if (s.getDelayEnergy() == 0) {
+            if (delayEnergy == 0) {
                 if (currentEnergy > 50)
                     currentEnergy = 50;
                 else
@@ -220,9 +220,9 @@ public class Actions {
         currentMoneySpent += (totalDecrease+init.getPriceBUILD2());
         int budget = s.getTotalMoneyOwned() - (totalDecrease+init.getPriceBUILD2());
 
-        if (s.getDelayFood()>0){
+        if (delayFood>0){
             delayFood--;
-            if (s.getDelayFood() == 0) {
+            if (delayFood == 0) {
                 if (currentFood > 50)
                     currentFood = 50;
                 else
@@ -230,9 +230,9 @@ public class Actions {
             }
         }
 
-        if (s.getDelayMaterials()>0){
+        if (delayMaterials>0){
             delayMaterials--;
-            if (s.getDelayMaterials() == 0) {
+            if (delayMaterials == 0) {
                 if (currentMaterials > 50)
                     currentMaterials = 50;
                 else
@@ -240,9 +240,9 @@ public class Actions {
             }
         }
 
-        if (s.getDelayEnergy()>0){
+        if (delayEnergy>0){
             delayEnergy--;
-            if (s.getDelayEnergy() == 0) {
+            if (delayEnergy == 0) {
                 if (currentEnergy > 50)
                     currentEnergy = 50;
                 else
