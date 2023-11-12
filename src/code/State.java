@@ -28,6 +28,29 @@ public class State {
         this.action = action;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        State otherState = (State) o;
+        return prosperity == otherState.prosperity &&
+                food == otherState.food &&
+                materials == otherState.materials &&
+                energy == otherState.energy &&
+                money_spent == otherState.money_spent &&
+                TotalMoneyOwned == otherState.TotalMoneyOwned &&
+                delayFood == otherState.delayFood &&
+                delayMaterials == otherState.delayMaterials &&
+                delayEnergy == otherState.delayEnergy &&
+                depth == otherState.depth &&
+                action == otherState.action;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(prosperity, food, materials, energy, money_spent, TotalMoneyOwned, delayFood, delayMaterials, delayEnergy, depth, action);
+    }
+
     public ActionsEnum getAction() {
         return action;
     }
@@ -196,10 +219,11 @@ public class State {
             //System.out.println(nextState6.toString());  // for debugging
             successors.add(nextState6);
         }
-
+        if (successors.isEmpty()) {
+            return null;
+        }
         return successors;
     }
-
 
 
     @Override

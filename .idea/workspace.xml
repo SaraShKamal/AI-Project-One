@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="testing phase..">
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="testing bfs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/SearchResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +65,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LLAPPublicGrading.testa1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AI-Project-One" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LLAPPublicGrading" />
+      <option name="METHOD_NAME" value="testa1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LLAPPublicGrading.testa1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -215,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699814039951</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="testing bfs">
+      <option name="closed" value="true" />
+      <created>1699816113798</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699816113798</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +273,43 @@
     <MESSAGE value="bla" />
     <MESSAGE value="merging" />
     <MESSAGE value="testing phase.." />
-    <option name="LAST_COMMIT_MESSAGE" value="testing phase.." />
+    <MESSAGE value="testing bfs" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing bfs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/LLAPPlanChecker.java</url>
+          <line>268</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/LLAPPlanChecker.java</url>
+          <line>269</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/LLAPPlanChecker.java</url>
+          <line>285</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/code/LLAPSearch.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/code/LLAPSearch.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/code/LLAPSearch.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

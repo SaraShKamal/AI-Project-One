@@ -25,15 +25,17 @@ public class BFS extends BFSComparator {
 
         int monetaryCost = 0;
         int nodesExpanded = 0;
+        Set<State> openSetStates = new HashSet<>();
 
         while (!openSet.isEmpty()) {
             State currentState = openSet.poll();
+            openSetStates.remove(currentState);
             nodesExpanded++;
 
             // Check if the current state is the goal state.
-            if (currentState.getProsperity()>=100) {
+            if (currentState.getProsperity() >= 100) {
                 //Goal state found.
-                monetaryCost=currentState.getMoney_spent();
+                monetaryCost = currentState.getMoney_spent();
 
                 while (currentState != null) {
                     statesString.add(currentState.toString());
@@ -41,18 +43,22 @@ public class BFS extends BFSComparator {
                     currentState = parentMap.get(currentState);
                 }
 
-                return new SearchResult(plan,monetaryCost,nodesExpanded,statesString); // Goal state found.
+                return new SearchResult(plan, monetaryCost, nodesExpanded, statesString); // Goal state found.
             }
             visited.add(currentState);
 
             // Expand and add unvisited successors to the openSet.
             List<State> successors = currentState.generateSuccessors(actions);
-
-            for (State successor : successors) {
-                if (!visited.contains(successor) && !openSet.contains(successor)) {
-                    openSet.add(successor);
-                    parentMap.put(successor, currentState);
-                    actionMap.put(successor, successor.getAction());
+            if (successors == null) {
+                continue;
+            } else {
+                for (State successor : successors) {
+                    if (!openSetStates.contains(successor)) {
+                        openSet.add(successor);
+                        openSetStates.add(successor);
+                        parentMap.put(successor, currentState);
+                        actionMap.put(successor, successor.getAction());
+                    }
                 }
             }
         }
