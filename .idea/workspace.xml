@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="merged IDS and UCS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AStar1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AStar1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AStar2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AStar2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699734629664</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="merged IDS and UCS">
+      <created>1699796310985</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699796310985</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +224,7 @@
     <MESSAGE value="greedy done" />
     <MESSAGE value="strategies syntax" />
     <MESSAGE value="Solve strings fixed+visualize parameter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solve strings fixed+visualize parameter" />
+    <MESSAGE value="merged IDS and UCS" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged IDS and UCS" />
   </component>
 </project>
