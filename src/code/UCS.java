@@ -12,7 +12,7 @@ public class UCS extends UCSComparator {
 
     public SearchResult ucsSearch(State initialState) {
         // Create a priority queue with the UCSComparator.
-        PriorityQueue<State> openSet = new PriorityQueue<>(new UCSComparator());
+        PriorityQueue<State> openSet = new PriorityQueue<>(Comparator.comparingInt(State::getMoney_spent));
         openSet.add(initialState);
         Set<State> visited = new HashSet<>(); // To keep track of visited states.
 
@@ -43,19 +43,21 @@ public class UCS extends UCSComparator {
             visited.add(currentState);
 
             // Expand and add unvisited successors to the openSet.
-            List<State> successors = currentState.generateSuccessors(actions);
-
-            for (State successor : successors) {
-                if (!visited.contains(successor) && !openSet.contains(successor)) {
-                    openSet.add(successor);
-                    parentMap.put(successor, currentState);
-                    actionMap.put(successor, successor.getAction());
-                }
+            List<State> successors = null;
+            if (currentState.getProsperity() < 100) {
+                successors = currentState.generateSuccessors(actions);
             }
+            if (successors != null) {
+                for (State successor : successors) {
+                    if (!visited.contains(successor) && !openSet.contains(successor)) {
+                        openSet.add(successor);
+                        parentMap.put(successor, currentState);
+                        actionMap.put(successor, successor.getAction());
+                    }
+                }
         }
-
-
-        return new SearchResult(Collections.emptyList(), -1, nodesExpanded, Collections.emptyList());
+    }
+        return null;
     }
 }
 

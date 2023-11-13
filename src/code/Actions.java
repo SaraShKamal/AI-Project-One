@@ -145,18 +145,22 @@ public class Actions {
         int currentMaterials = s.getMaterials();
         int currentEnergy = s.getEnergy();
         int currentMoneySpent = s.getMoney_spent();
-        int delayFood = s.getDelayFood();
-        int delayMaterials = s.getDelayMaterials();
-        int delayEnergy = s.getDelayEnergy();
+        int budget = s.getTotalMoneyOwned();
 
         currentFood-=init.getFoodUseBUILD1();
         currentMaterials-=init.getMaterialsUseBUILD1();
         currentEnergy-=init.getEnergyUseBUILD1();
+
         int totalDecrease = (init.getUnitPriceFood()*init.getFoodUseBUILD1()) +
                 (init.getUnitPriceMaterials()*init.getMaterialsUseBUILD1()) +
                 (init.getUnitPriceEnergy()*init.getEnergyUseBUILD1());
+
         currentMoneySpent += (totalDecrease+init.getPriceBUILD1());
-        int budget = s.getTotalMoneyOwned() - (totalDecrease+init.getPriceBUILD1());
+        budget-= (totalDecrease+init.getPriceBUILD1());
+
+        int delayFood = s.getDelayFood();
+        int delayMaterials = s.getDelayMaterials();
+        int delayEnergy = s.getDelayEnergy();
 
         if (delayFood>0){
             delayFood--;
@@ -190,7 +194,7 @@ public class Actions {
 
         if (s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0 ||
                 s.getFood() < init.getFoodUseBUILD1() || s.getMaterials() < init.getMaterialsUseBUILD1() ||
-                s.getEnergy() <init.getEnergyUseBUILD1()) {
+                s.getEnergy() <init.getEnergyUseBUILD1() || currentMoneySpent>100000) {
             return null;
         }
 
@@ -207,10 +211,7 @@ public class Actions {
         int currentMaterials = s.getMaterials();
         int currentEnergy = s.getEnergy();
         int currentMoneySpent = s.getMoney_spent();
-        int delayFood = s.getDelayFood();
-        int delayMaterials = s.getDelayMaterials();
-        int delayEnergy = s.getDelayEnergy();
-
+        int budget = s.getTotalMoneyOwned();
         currentFood-=init.getFoodUseBUILD2();
         currentMaterials-=init.getMaterialsUseBUILD2();
         currentEnergy-=init.getEnergyUseBUILD2();
@@ -218,7 +219,11 @@ public class Actions {
                 (init.getUnitPriceMaterials()*init.getMaterialsUseBUILD2()) +
                 (init.getUnitPriceEnergy()*init.getEnergyUseBUILD2());
         currentMoneySpent += (totalDecrease+init.getPriceBUILD2());
-        int budget = s.getTotalMoneyOwned() - (totalDecrease+init.getPriceBUILD2());
+        budget-= (totalDecrease+init.getPriceBUILD2());
+
+        int delayFood = s.getDelayFood();
+        int delayMaterials = s.getDelayMaterials();
+        int delayEnergy = s.getDelayEnergy();
 
         if (delayFood>0){
             delayFood--;
@@ -252,14 +257,15 @@ public class Actions {
 
         if (s.getTotalMoneyOwned() <= 0 || s.getFood() <= 0 || s.getMaterials() <= 0 || s.getEnergy() <= 0 ||
                 s.getFood() < init.getFoodUseBUILD2() || s.getMaterials() < init.getMaterialsUseBUILD2() ||
-                s.getEnergy() <init.getEnergyUseBUILD2()) {
+                s.getEnergy() <init.getEnergyUseBUILD2() || currentMoneySpent>100000) {
             return null;
         }
 
-        return new State(s.getProsperity()+init.getProsperityBUILD2(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
+        return new State(s.getProsperity()+init.getProsperityBUILD2(), currentFood,
+                currentMaterials, currentEnergy,
+                currentMoneySpent,
                 budget, delayFood, delayMaterials, delayEnergy,
                 s.getDepth()+1,ActionsEnum.BUILD2);
-
 
     }
 }

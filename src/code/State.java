@@ -48,7 +48,7 @@ public class State {
 
     @Override
     public int hashCode() {
-        return Objects.hash(prosperity, food, materials, energy, money_spent, TotalMoneyOwned, delayFood, delayMaterials, delayEnergy, depth, action);
+        return Objects.hash(prosperity, food, materials, energy, money_spent, delayFood, delayMaterials, delayEnergy, depth, action);
     }
 
     public ActionsEnum getAction() {

@@ -41,16 +41,20 @@ public class Greedy1 {
                 }
                 visited.add(currentState);
 
-                List<State> successors = currentState.generateSuccessors(actions);
-
-                for (State successor : successors) {
-                    if (!visited.contains(successor) && !openSet.contains(successor)) {
-                        openSet.add(successor);
-                        parentMap.put(successor, currentState);
-                        actionMap.put(successor, successor.getAction());
-                    }
+                List<State> successors = null;
+                if (currentState.getProsperity() < 100) {
+                    successors = currentState.generateSuccessors(actions);
                 }
+                if (successors != null) {
+                    for (State successor : successors) {
+                        if (!visited.contains(successor) && !openSet.contains(successor)) {
+                            openSet.add(successor);
+                            parentMap.put(successor, currentState);
+                            actionMap.put(successor, successor.getAction());
+                        }
+                    }
             }
+        }
 
             return null;
         }

@@ -48,10 +48,11 @@ public class BFS extends BFSComparator {
             visited.add(currentState);
 
             // Expand and add unvisited successors to the openSet.
-            List<State> successors = currentState.generateSuccessors(actions);
-            if (successors == null) {
-                continue;
-            } else {
+            List<State> successors = null;
+            if (currentState.getProsperity() < 100) {
+                successors = currentState.generateSuccessors(actions);
+            }
+            if (successors != null) {
                 for (State successor : successors) {
                     if (!openSetStates.contains(successor)) {
                         openSet.add(successor);
