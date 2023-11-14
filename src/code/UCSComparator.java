@@ -6,12 +6,16 @@ public class UCSComparator implements Comparator<State> {
 
     @Override
     public int compare(State o1, State o2) {
-        if (o1.getMoney_spent() < o2.getMoney_spent()) {
-            return -1; //state1 has lower cost, so it comes first
-        } else if (o1.getMoney_spent() > o2.getMoney_spent()) {
-            return 1; //state2 has lower cost, so it comes first
+        double ratio1 = (double) o1.getProsperity() / o1.getMoney_spent();
+        double ratio2 = (double) o2.getProsperity() / o2.getMoney_spent();
+
+        // Compare based on the ratio of prosperity increase to money spent
+        if (ratio1 > ratio2) {
+            return -1; // State 1 has a higher ratio, so it comes first
+        } else if (ratio1 < ratio2) {
+            return 1; // State 2 has a higher ratio, so it comes first
         } else {
-            return 0; //both states have the same cost
+            return 0;
         }
     }
 }
