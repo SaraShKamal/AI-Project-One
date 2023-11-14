@@ -3,6 +3,7 @@ import java.util.*;
 
 public class BFS extends BFSComparator {
         private Actions actions;
+        private Set<State> visited= new HashSet<>();
 
     public BFS(Actions actions) {
         super();
@@ -14,22 +15,16 @@ public class BFS extends BFSComparator {
         // Create a priority queue with the BFSComparator.
         PriorityQueue<State> openSet = new PriorityQueue<>(new BFSComparator());
         openSet.add(initialState);
-
-        Set<State> visited = new HashSet<>(); // To keep track of visited states.
-
-        Map<State, State> parentMap = new HashMap<>();
-        Map<State, ActionsEnum> actionMap = new HashMap<>();
         List<ActionsEnum> plan = new ArrayList<>();
         //State String
         List<String> statesString = new ArrayList<>();
 
         int monetaryCost = 0;
         int nodesExpanded = 0;
-        Set<State> openSetStates = new HashSet<>();
+
 
         while (!openSet.isEmpty()) {
             State currentState = openSet.poll();
-            openSetStates.remove(currentState);
             nodesExpanded++;
 
             // Check if the current state is the goal state.
@@ -39,10 +34,10 @@ public class BFS extends BFSComparator {
 
                 while (currentState != null) {
                     statesString.add(currentState.toString());
-                    plan.add(0, actionMap.get(currentState)); // Add action at the beginning of the list.
-                    currentState = parentMap.get(currentState);
+                    plan.add(currentState.getAction()); // Add action at the beginning of the list.
+                    currentState = currentState.getParent();
                 }
-
+                Collections.reverse(plan);
                 return new SearchResult(plan, monetaryCost, nodesExpanded, statesString); // Goal state found.
             }
             visited.add(currentState);
@@ -54,11 +49,10 @@ public class BFS extends BFSComparator {
             }
             if (successors != null) {
                 for (State successor : successors) {
-                    if (!openSetStates.contains(successor)) {
+                    if (!visited.contains(successor) && !openSet.contains(successor)) {
                         openSet.add(successor);
-                        openSetStates.add(successor);
-                        parentMap.put(successor, currentState);
-                        actionMap.put(successor, successor.getAction());
+                        successor.setParent(currentState);
+                        successor.setAction(successor.getAction());
                     }
                 }
             }

@@ -3,6 +3,7 @@ import java.util.*;
 
 public class UCS extends UCSComparator {
     private Actions actions;
+    private Set<State> visited= new HashSet<>();
 
     public UCS(Actions actions) {
         super();
@@ -14,10 +15,6 @@ public class UCS extends UCSComparator {
         // Create a priority queue with the UCSComparator.
         PriorityQueue<State> openSet = new PriorityQueue<>(Comparator.comparingInt(State::getMoney_spent));
         openSet.add(initialState);
-        Set<State> visited = new HashSet<>(); // To keep track of visited states.
-
-        Map<State, State> parentMap = new HashMap<>();
-        Map<State, ActionsEnum> actionMap = new HashMap<>();
         List<ActionsEnum> plan = new ArrayList<>();
         //State String
         List<String> statesString = new ArrayList<>();
@@ -34,10 +31,10 @@ public class UCS extends UCSComparator {
                 monetaryCost=currentState.getMoney_spent();
                 while (currentState != null) {
                     statesString.add(currentState.toString());
-                    plan.add(0, actionMap.get(currentState)); // Add action at the beginning of the list.
-                    currentState = parentMap.get(currentState);
+                    plan.add(currentState.getAction());
+                    currentState = currentState.getParent();
                 }
-
+                Collections.reverse(plan);
                 return new SearchResult(plan,monetaryCost,nodesExpanded,statesString); // Goal state found.
             }
             visited.add(currentState);
@@ -51,8 +48,8 @@ public class UCS extends UCSComparator {
                 for (State successor : successors) {
                     if (!visited.contains(successor) && !openSet.contains(successor)) {
                         openSet.add(successor);
-                        parentMap.put(successor, currentState);
-                        actionMap.put(successor, successor.getAction());
+                        successor.setParent(currentState);
+                        successor.setAction(successor.getAction());
                     }
                 }
         }

@@ -17,22 +17,16 @@ import java.util.Comparator;
             return gScore + hScore;
         }
 
-
+    // heuristic that considers how close the town is to reaching the goal state.
+    // For example, you could calculate the percentage of prosperity achieved so far.
         public int calculateHeuristic(State state) {
-            int scarcityHeuristic = 0;
-            int criticalResourceThreshold = 10;  // Adjust as needed
-            if (state.getFood() < criticalResourceThreshold) {
-                scarcityHeuristic += criticalResourceThreshold - state.getFood();
-            }
-            if (state.getMaterials() < criticalResourceThreshold) {
-                scarcityHeuristic += criticalResourceThreshold - state.getMaterials();
-            }
-            if (state.getEnergy() < criticalResourceThreshold) {
-                scarcityHeuristic += criticalResourceThreshold - state.getEnergy();
-            }
-            return scarcityHeuristic;
+            int goalProsperity = 100;
+            int currentProsperity = state.getProsperity();
+            double percentageAchieved = (double) currentProsperity / goalProsperity;
+            return (int) Math.ceil((1 - percentageAchieved) * goalProsperity);
         }
     }
+
 
 
 
