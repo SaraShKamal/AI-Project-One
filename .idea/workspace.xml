@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="bfs 10/11 tests passed">
-      <change afterPath="$PROJECT_DIR$/src/code/Greedy1Comparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/heuristics" afterDir="false" />
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="Merging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AStar1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AStar1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AStar2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AStar2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/ActionsEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ActionsEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AstarComparator1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AstarComparator1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AstarComparator2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AstarComparator2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/GenericSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/GenericSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Greedy1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Greedy1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Greedy2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Greedy2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/IDS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/IDS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/UCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/UCS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,6 +26,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
