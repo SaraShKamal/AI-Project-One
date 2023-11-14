@@ -1,8 +1,6 @@
-1- Greedy 1: that worked
-package code;
-import java.util.Comparator;
-public class Greedy1Comparator  implements Comparator<State> {
-        @Override
+
+//3- A* 1: ?? ----> can be the same as greedy 1
+@Override
         public int compare(State o1, State o2) {
             int distance1 = estimateDistanceToGoal(o1);
             int distance2 = estimateDistanceToGoal(o2);
@@ -13,19 +11,16 @@ public class Greedy1Comparator  implements Comparator<State> {
 
         private int estimateDistanceToGoal(State state) {
             // Implement your heuristic to estimate the remaining distance to the goal
-            return Math.max(0, 100 - state.getProsperity());
+            // Combine both prosperity and total money spent in a way that suits your problem
+            int prosperityDistance = Math.max(0, 100 - state.getProsperity());
+            int moneySpentDistance = state.getMoney_spent(); // Adjust this based on your State class
+
+            // You might use a weighted sum or other combination logic
+            // For now, let's use a simple sum for demonstration purposes
+            return prosperityDistance + moneySpentDistance;
 
         }
-    }
-
-//2- Greedy 2: the same
-//3- A* 1: ?? ----> can be the same as greedy 1
 //4- A* 2: ?? ----> can be the same as greedy 2
-package code;
-import java.util.Comparator;
-
-
-public class AstarComparator2 implements Comparator<State> {
     @Override
     public int compare(State state1, State state2) {
         double fScore1 = calculateFScore(state1);
