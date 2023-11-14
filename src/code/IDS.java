@@ -3,6 +3,7 @@ import java.util.*;
 
 public class IDS extends DFSComparator {
     private Actions actions;
+    private Set<State> visited= new HashSet<>();
 
     public IDS(Actions actions) {
         super();
@@ -26,10 +27,6 @@ public class IDS extends DFSComparator {
     private SearchResult performDepthLimitedSearch(State initialState, int depthLimit) {
         PriorityQueue<State> openSet = new PriorityQueue<>(new DFSComparator());
         openSet.add(initialState);
-
-        Set<State> visited = new HashSet<>();
-        Map<State, State> parentMap = new HashMap<>();
-        Map<State, ActionsEnum> actionMap = new HashMap<>();
         List<ActionsEnum> plan = new ArrayList<>();
         //State String
         List<String> statesString = new ArrayList<>();
@@ -44,9 +41,10 @@ public class IDS extends DFSComparator {
                 monetaryCost = currentState.getMoney_spent();
                 while (currentState != null) {
                     statesString.add(currentState.toString());
-                    plan.add(0, actionMap.get(currentState));
-                    currentState = parentMap.get(currentState);
+                    plan.add(currentState.getAction());
+                    currentState = currentState.getParent();
                 }
+                Collections.reverse(plan);
                 return new SearchResult(plan, monetaryCost, nodesExpanded, statesString);
             }
 
@@ -64,8 +62,8 @@ public class IDS extends DFSComparator {
                 for (State successor : successors) {
                     if (!visited.contains(successor) && !openSet.contains(successor)) {
                         openSet.add(successor);
-                        parentMap.put(successor, currentState);
-                        actionMap.put(successor, successor.getAction());
+                        successor.setParent(currentState);
+                        successor.setAction(successor.getAction());
                     }
                 }
             }

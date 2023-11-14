@@ -2,6 +2,7 @@ package code;
 import java.util.*;
 public class DFS extends DFSComparator {
     private Actions actions;
+    private Set<State> visited= new HashSet<>();
 
     public DFS(Actions actions) {
         super();
@@ -13,10 +14,6 @@ public class DFS extends DFSComparator {
         Stack<State> openSet = new Stack<>();
         openSet.push(initialState);
 
-        Set<State> visited = new HashSet<>(); // To keep track of visited states.
-
-        Map<State, State> parentMap = new HashMap<>();
-        Map<State, ActionsEnum> actionMap = new HashMap<>();
         List<ActionsEnum> plan = new ArrayList<>();
         // State String
         List<String> statesString = new ArrayList<>();
@@ -34,10 +31,11 @@ public class DFS extends DFSComparator {
                 monetaryCost = currentState.getMoney_spent();
                 while (currentState != null) {
                     statesString.add(currentState.toString());
-                    plan.add(0, actionMap.get(currentState)); // Add action at the beginning of the list.
-                    currentState = parentMap.get(currentState);
+                    plan.add(currentState.getAction());
+                    currentState = currentState.getParent();
                 }
-
+                //reverse the plan
+                Collections.reverse(plan);
                 return new SearchResult(plan, monetaryCost, nodesExpanded, statesString); // Goal state found.
             }
             visited.add(currentState);
@@ -50,9 +48,9 @@ public class DFS extends DFSComparator {
             if (successors != null) {
                 for (State successor : successors) {
                     if (!visited.contains(successor) && !openSet.contains(successor)) {
-                        openSet.push(successor); // Change add to push for Stack
-                        parentMap.put(successor, currentState);
-                        actionMap.put(successor, successor.getAction());
+                        openSet.push(successor);
+                        successor.setParent(currentState);
+                        successor.setAction(successor.getAction());
                     }
                 }
             }

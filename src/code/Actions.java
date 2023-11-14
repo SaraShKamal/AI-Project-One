@@ -26,7 +26,7 @@ public class Actions {
         }
         return new State(s.getProsperity(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
                 budget, init.getDelayRequestFood(), s.getDelayMaterials(), s.getDelayEnergy(),
-                s.getDepth()+1,ActionsEnum.REQUESTFOOD);
+                s.getDepth()+1,ActionsEnum.REQUESTFOOD,s);
     }
 
     //RequestMaterials
@@ -51,7 +51,7 @@ public class Actions {
         else {
             return new State(s.getProsperity(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
                     budget, s.getDelayFood(), init.getDelayRequestMaterials(), s.getDelayEnergy(),
-                    s.getDepth() + 1, ActionsEnum.REQUESTMATERIALS);
+                    s.getDepth() + 1, ActionsEnum.REQUESTMATERIALS,s);
         }
     }
 
@@ -77,7 +77,7 @@ public class Actions {
         else {
             return new State(s.getProsperity(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
                     budget, s.getDelayFood(), s.getDelayMaterials(), init.getDelayRequestEnergy(),
-                    s.getDepth() + 1, ActionsEnum.REQUESTENERGY);
+                    s.getDepth() + 1, ActionsEnum.REQUESTENERGY,s);
         }
     }
 
@@ -135,7 +135,7 @@ public class Actions {
 
         return new State(s.getProsperity(), currentFood, currentMaterials, currentEnergy, currentMoneySpent,
                 budget, delayFood, delayMaterials, delayEnergy,
-                s.getDepth()+1,ActionsEnum.WAIT);
+                s.getDepth()+1,ActionsEnum.WAIT,s);
 
     }
 
@@ -201,7 +201,7 @@ public class Actions {
         return new State(s.getProsperity()+init.getProsperityBUILD1(), currentFood, currentMaterials, currentEnergy,
                 currentMoneySpent,
                 budget, delayFood, delayMaterials, delayEnergy,
-                s.getDepth()+1,ActionsEnum.BUILD1);
+                s.getDepth()+1,ActionsEnum.BUILD1,s);
 
     }
 
@@ -265,7 +265,27 @@ public class Actions {
                 currentMaterials, currentEnergy,
                 currentMoneySpent,
                 budget, delayFood, delayMaterials, delayEnergy,
-                s.getDepth()+1,ActionsEnum.BUILD2);
+                s.getDepth()+1,ActionsEnum.BUILD2,s);
 
+    }
+
+    //performAction method
+    public State performAction(State s, ActionsEnum action) {
+        switch (action) {
+            case REQUESTFOOD:
+                return RequestFood(s);
+            case REQUESTMATERIALS:
+                return RequestMaterials(s);
+            case REQUESTENERGY:
+                return RequestEnergy(s);
+            case WAIT:
+                return WAIT(s);
+            case BUILD1:
+                return BUILD1(s);
+            case BUILD2:
+                return BUILD2(s);
+            default:
+                return null;
+        }
     }
 }

@@ -3,6 +3,7 @@ import java.util.*;
 
 public class AStar2 {
     private Actions actions;
+    private Set<State> visited= new HashSet<>();
 
     public AStar2(Actions actions) {
         this.actions = actions;
@@ -11,9 +12,7 @@ public class AStar2 {
     public SearchResult aStarSearch(State initialState) {
         PriorityQueue<State> openSet = new PriorityQueue<>(new AstarComparator2());
         openSet.add(initialState);
-        Set<State> visited = new HashSet<>();
-        Map<State, State> parentMap = new HashMap<>();
-        Map<State, ActionsEnum> actionMap = new HashMap<>();
+
         List<ActionsEnum> plan = new ArrayList<>();
         //State String
         List<String> statesString = new ArrayList<>();
@@ -30,10 +29,10 @@ public class AStar2 {
                 monetaryCost = currentState.getMoney_spent();
                 while (currentState != null) {
                     statesString.add(currentState.toString());
-                    plan.add(0, actionMap.get(currentState));
-                    currentState = parentMap.get(currentState);
+                    plan.add(currentState.getAction());
+                    currentState = currentState.getParent();
                 }
-
+                Collections.reverse(plan);
                 return new SearchResult(plan, monetaryCost, nodesExpanded, statesString);
             }
             visited.add(currentState);
@@ -46,8 +45,8 @@ public class AStar2 {
                 for (State successor : successors) {
                     if (!visited.contains(successor) && !openSet.contains(successor)) {
                         openSet.add(successor);
-                        parentMap.put(successor, currentState);
-                        actionMap.put(successor, successor.getAction());
+                        successor.setParent(currentState);
+                        successor.setAction(successor.getAction());
                     }
                 }
              }

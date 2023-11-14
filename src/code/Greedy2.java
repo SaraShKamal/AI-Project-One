@@ -14,10 +14,7 @@ public class Greedy2 {
     public SearchResult greedySearch(State initialState) {
         PriorityQueue<State> openSet = new PriorityQueue<>(new Greedy2Comparator());
         openSet.add(initialState);
-
         Set<State> visited = new HashSet<>();
-        Map<State, State> parentMap = new HashMap<>();
-        Map<State, ActionsEnum> actionMap = new HashMap<>();
         List<ActionsEnum> plan = new ArrayList<>();
         //State String
         List<String> statesString = new ArrayList<>();
@@ -34,10 +31,10 @@ public class Greedy2 {
                 monetaryCost = currentState.getMoney_spent();
                 while (currentState != null) {
                     statesString.add(currentState.toString());
-                    plan.add(0, actionMap.get(currentState));
-                    currentState = parentMap.get(currentState);
+                    plan.add(currentState.getAction());
+                    currentState = currentState.getParent();
                 }
-
+                Collections.reverse(plan);
                 return new SearchResult(plan, monetaryCost, nodesExpanded, statesString);
             }
             visited.add(currentState);
@@ -50,8 +47,8 @@ public class Greedy2 {
                 for (State successor : successors) {
                     if (!visited.contains(successor) && !openSet.contains(successor)) {
                         openSet.add(successor);
-                        parentMap.put(successor, currentState);
-                        actionMap.put(successor, successor.getAction());
+                        successor.setParent(currentState);
+                        successor.setAction(successor.getAction());
                     }
                 }
         }
