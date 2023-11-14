@@ -3,7 +3,8 @@ import java.util.*;
 
 public class IDS extends DFSComparator {
     private Actions actions;
-    private Set<State> visited= new HashSet<>();
+    private Set<State> visited = new HashSet<>();
+    private Stack<State> openSet = new Stack<>();
 
     public IDS(Actions actions) {
         super();
@@ -21,20 +22,20 @@ public class IDS extends DFSComparator {
             }
 
             depthLimit++; // Increment the depth limit for the next iteration.
+            visited.clear(); // Clear visited set for the next iteration.
         }
     }
 
     private SearchResult performDepthLimitedSearch(State initialState, int depthLimit) {
-        PriorityQueue<State> openSet = new PriorityQueue<>(new DFSComparator());
-        openSet.add(initialState);
+        openSet.clear(); // Clear the stack for a new search.
+        openSet.push(initialState);
         List<ActionsEnum> plan = new ArrayList<>();
-        //State String
         List<String> statesString = new ArrayList<>();
         int monetaryCost = 0;
         int nodesExpanded = 0;
 
         while (!openSet.isEmpty()) {
-            State currentState = openSet.poll();
+            State currentState = openSet.pop();
             nodesExpanded++;
 
             if (currentState.getProsperity() >= 100) {
@@ -53,15 +54,16 @@ public class IDS extends DFSComparator {
             }
 
             visited.add(currentState);
-
+            // Expand and add unvisited successors to the openSet.
             List<State> successors = null;
             if (currentState.getProsperity() < 100) {
                 successors = currentState.generateSuccessors(actions);
             }
-            if (successors != null) {
+
+            if (successors!= null) {
                 for (State successor : successors) {
                     if (!visited.contains(successor) && !openSet.contains(successor)) {
-                        openSet.add(successor);
+                        openSet.push(successor);
                         successor.setParent(currentState);
                         successor.setAction(successor.getAction());
                     }

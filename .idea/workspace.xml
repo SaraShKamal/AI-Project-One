@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="GR1 done">
+    <list default="true" id="996314ad-6f3d-4d27-aec1-6cd967499ea2" name="Changes" comment="final edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AstarComparator1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AstarComparator1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AstarComparator2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AstarComparator2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/UCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/UCS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/UCSComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/UCSComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/IDS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/IDS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LLAPSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LLAPSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/LLAPPublicGrading.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +56,39 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.LLAPPublicGrading.testg0">
+  <component name="RunManager">
+    <configuration name="LLAPPublicGrading.testa1" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="AI-Project-One" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LLAPPublicGrading" />
+      <option name="METHOD_NAME" value="testa1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LLAPPublicGrading.testd1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AI-Project-One" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LLAPPublicGrading" />
+      <option name="METHOD_NAME" value="testd1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LLAPPublicGrading.testg0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AI-Project-One" />
       <extension name="coverage">
@@ -86,22 +116,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.LLAPPublicGrading" />
       <option name="METHOD_NAME" value="testg1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LLAPPublicGrading.testh2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AI-Project-One" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LLAPPublicGrading" />
-      <option name="METHOD_NAME" value="testh2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LLAPPublicGrading.testd1" />
         <item itemvalue="JUnit.LLAPPublicGrading.testg0" />
         <item itemvalue="JUnit.LLAPPublicGrading.testg1" />
         <item itemvalue="JUnit.LLAPPublicGrading.testh8" />
         <item itemvalue="JUnit.LLAPPublicGrading.testh3" />
-        <item itemvalue="JUnit.LLAPPublicGrading.testh2" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699974171780</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="final edit">
+      <option name="closed" value="true" />
+      <created>1699984041045</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699984041045</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -362,6 +384,7 @@
     <MESSAGE value="bfs 10/11 tests passed" />
     <MESSAGE value="remaining to test GR1,AS1,AS2,UC" />
     <MESSAGE value="GR1 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="GR1 done" />
+    <MESSAGE value="final edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final edit" />
   </component>
 </project>
