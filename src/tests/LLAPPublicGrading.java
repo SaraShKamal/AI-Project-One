@@ -628,7 +628,7 @@ public class LLAPPublicGrading {
 //		LLAPPlanChecker pc = new LLAPPlanChecker(initialState10);
 //		assertTrue("The output actions do not lead to a goal state.", pc.applyPlan(initialState10, solution));
 //	}
-//
+
 //
 //	@Test(timeout = 120000)
 //	public void testh0() throws Exception {

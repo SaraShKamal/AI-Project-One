@@ -4,26 +4,23 @@ import java.util.Comparator;
 
     public class AstarComparator2 implements Comparator<State> {
         @Override
-        public int compare(State state1, State state2) {
-            int fScore1 = calculateFScore(state1);
-            int fScore2 = calculateFScore(state2);
+        public int compare(State o1, State o2) {
+            // Heuristic: Resource shortages
+            int resourceShortages1 = Math.max(0, Math.min(50 - o1.getFood(), Math.min(50 - o1.getMaterials(), 50 - o1.getEnergy())));
+            int resourceShortages2 = Math.max(0, Math.min(50 - o2.getFood(), Math.min(50 - o2.getMaterials(), 50 - o2.getEnergy())));
 
-            return Integer.compare(fScore1, fScore2);
-        }
-        private int calculateFScore(State state) {
-            int hScore = calculateHeuristic(state);
-            int gScore = state.getMoney_spent();
+            // Estimated cost based on heuristic
+            int estimatedCost1 = o1.getMoney_spent() + resourceShortages1;
+            int estimatedCost2 = o2.getMoney_spent() + resourceShortages2;
 
-            return gScore + hScore;
-        }
-
-    // heuristic that considers how close the town is to reaching the goal state.
-    // For example, you could calculate the percentage of prosperity achieved so far.
-        public int calculateHeuristic(State state) {
-            int goalProsperity = 100;
-            int currentProsperity = state.getProsperity();
-            double percentageAchieved = (double) currentProsperity / goalProsperity;
-            return (int) Math.ceil((1 - percentageAchieved) * goalProsperity);
+            // Compare based on the total estimated cost
+            if (estimatedCost1 < estimatedCost2) {
+                return -1; // State 1 has a lower estimated cost, so it comes first
+            } else if (estimatedCost1 > estimatedCost2) {
+                return 1; // State 2 has a lower estimated cost, so it comes first
+            } else {
+                return 0; // Both states have the same estimated cost
+            }
         }
     }
 

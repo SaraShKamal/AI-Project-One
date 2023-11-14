@@ -13,7 +13,7 @@ public class UCS extends UCSComparator {
 
     public SearchResult ucsSearch(State initialState) {
         // Create a priority queue with the UCSComparator.
-        PriorityQueue<State> openSet = new PriorityQueue<>(Comparator.comparingInt(State::getMoney_spent));
+        PriorityQueue<State> openSet = new PriorityQueue<>(new UCSComparator());
         openSet.add(initialState);
         List<ActionsEnum> plan = new ArrayList<>();
         //State String
